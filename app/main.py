@@ -25,7 +25,7 @@ def sha256_hash_str(to_hash: str) -> str:
 def worker(start: int, end: int, hashes: set) -> None:
     result = {}
     for i in range(start, end):
-        pwd = f"{i: 08d}"
+        pwd = f"{i:08d}"
         h = sha256_hash_str(pwd)
         if h in hashes:
             result[h] = pwd
